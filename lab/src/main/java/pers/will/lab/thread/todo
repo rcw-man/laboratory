@@ -1,0 +1,4 @@
+Thread的主入口，Java如何设置Thread的资源、何时分派classloader，thread如何装载对象
+两种锁的不同
+
+如何监听线程的cpu time、RT，进而计算出线程池的合理大小；涉及操作系统的部分，如何说明进行扩展学习
