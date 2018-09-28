@@ -9,7 +9,7 @@ SLF4J（Simple Logging Facade）和JCL有什么异同？为什么会诞生？
     - 相同：都是日志API而不负责实现
 
 动态绑定和静态绑定都是如何实现的？
-    - 动态绑定模式中，是通过实时扫描LoggerFactory等类的实现，来找到打印器的（但这样解释不了jcl-over-slf4j.jar的存在）
+    - （未确认）动态绑定模式中，是通过实时扫描LoggerFactory等类的实现，来找到打印器的（但这样解释不了jcl-over-slf4j.jar的存在）
     - 静态绑定模式中，适配器有个类StaticLoggerBinder，实现了LoggerFactoryBinder接口；适配器类型就决定了打印器类型
 
 谁决定了使用的是JCL还是SLF4J？除了代码中显式编写，是否还有默认输出的绑定？
