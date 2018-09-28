@@ -8,5 +8,5 @@
        http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/mvc
        ">
-    <bean class="pers.will.lab.log.HelloSpringLogger"/>
+    <bean class="pers.will.lab.log.facade.HelloSpringLogger"/>
 </beans>

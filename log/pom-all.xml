@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <!-- *************************************************************************
-    ** 该配置集中了多个日志框架、适配器；使用时只能保留一个适配器，多个适配器存在会引发日志框架装载冲突 **
+    ** 该配置集中了多个日志框架，使用时只能保留一个适配器，多个适配器存在会引发日志框架装载冲突 **
     ******************************************************************************-->
     <dependencies>
         <!-- jcl门面接口 -->
@@ -34,17 +34,17 @@
 
         <!-- ******** log4j实现  ******** -->
         <!-- slf4j应用log4j的适配器 -->
-        <!--<dependency>-->
-            <!--<groupId>org.slf4j</groupId>-->
-            <!--<artifactId>slf4j-log4j12</artifactId>-->
-            <!--<version>1.7.25</version>-->
-        <!--</dependency>-->
-        <!-- log4j转slf4j适配器，与"slf4j应用log4j的适配器不能同时存在，否则会出现相互委托" -->
-        <!--<dependency>-->
-            <!--<groupId>org.slf4j</groupId>-->
-            <!--<artifactId>log4j-over-slf4j</artifactId>-->
-            <!--<version>1.7.25</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+        <!-- log4j转slf4j适配器，与"slf4j应用log4j的适配器不能同时存在，否则会出现环状调用" -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>1.7.25</version>
+        </dependency>
         <!-- log4j实现 -->
         <dependency>
             <groupId>log4j</groupId>
@@ -53,7 +53,7 @@
         </dependency>
 
         <!-- ******** log4j2实现  ******** -->
-        <!--  log4j2 适配器 -->
+        <!--  log4j2 适配包 -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-slf4j-impl</artifactId>
@@ -79,12 +79,12 @@
         </dependency>
 
         <!-- ******** logback实现  ******** -->
-        <!--  logback 适配器 -->
-        <!--<dependency>-->
-            <!--<groupId>ch.qos.logback</groupId>-->
-            <!--<artifactId>logback-classic</artifactId>-->
-            <!--<version>1.2.3</version>-->
-        <!--</dependency>-->
+        <!--  logback 适配包 -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
         <!--  logback 实现 -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
